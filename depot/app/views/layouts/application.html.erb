@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- <head>
-    <title>Depot</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body class='<%= controller.controller_name%>'>
-    <%=yield %>
-  </body>  -->
 
 <head>
   <title>Pragprog Books Online Store</title>
@@ -26,11 +14,14 @@
   </div>
   <div id="columns">
     <div id="side">
+      <div id="cart">
+        <% if @cart %>
+            <%= render @cart %>
+            <% end %>
+      </div>
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><a href="http://localhost:3000/">Home</a></li>
+        <li><a href="http://localhost:3000/products">Product</a></li>
       </ul>
     </div>
     <div id="main">
