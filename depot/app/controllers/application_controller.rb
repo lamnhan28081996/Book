@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-	#before_action :set_i18n_locale_from_param
+	before_action :set_i18n_locale_from_params
 	before_action :authorize
 	protected
 	def authorize
